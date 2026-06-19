@@ -43,6 +43,6 @@ def scaled_dot_product_attention(q, k, v):
 
 ## 下一步
 
-- 把 `hugo.yaml` 里所有 `USERNAME` 换成你的 GitHub 用户名
 - 写新文章：`hugo new posts/我的文章.md`
-- 本地预览：`hugo server -D`
+- 本地预览：`hugo server -D`，浏览器开 http://localhost:1313
+- 发布：`git add -A && git commit -m "..." && git push`，GitHub Actions 自动部署

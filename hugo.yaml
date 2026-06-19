@@ -1,0 +1,129 @@
+# ============================================================================
+# Hugo config — PaperMod theme
+# 改这里：把 baseURL 换成你的 GitHub Pages 地址（见文件底部说明）
+# ============================================================================
+baseURL: "https://USERNAME.github.io/"
+locale: "zh-cn"                # 主语言；写英文文章也完全没问题
+title: "Jianxin's Blog"
+theme: PaperMod
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+hasCJKLanguage: true           # 中文字数统计/摘要更准确
+
+pagination:
+  pagerSize: 10
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+# ----------------------------------------------------------------------------
+# 站点参数
+# ----------------------------------------------------------------------------
+params:
+  env: production              # 启用 GA / 结构化数据等生产特性
+  description: "读研期间的笔记、论文阅读与思考"
+  author: "Jianxin"
+  defaultTheme: auto          # auto | light | dark
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true   # 代码块右上角一键复制
+  ShowWordCount: true
+  ShowToc: true               # 文章右侧目录
+  TocOpen: false
+  ShowRssButtonInSectionTermList: true
+  disableScrollToTop: false
+  comments: false
+
+  # 首页顶部的自我介绍（PaperMod home-info 模式）
+  homeInfoParams:
+    Title: "Hi 👋"
+    Content: >
+      读研期间的研究笔记、论文阅读与随笔。主要关注机器学习 / 计算机视觉方向。
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/USERNAME"
+    - name: email
+      url: "mailto:q3556168405@gmail.com"
+    - name: rss
+      url: "index.xml"
+
+  # 站内搜索（配合下面的 outputs.home: JSON）
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+  assets:
+    disableHLJS: true          # 用 Hugo 内置 Chroma 高亮，不用 highlight.js
+
+# ----------------------------------------------------------------------------
+# 顶部导航菜单
+# ----------------------------------------------------------------------------
+menu:
+  main:
+    - identifier: posts
+      name: 文章
+      url: /posts/
+      weight: 10
+    - identifier: archives
+      name: 归档
+      url: /archives/
+      weight: 20
+    - identifier: tags
+      name: 标签
+      url: /tags/
+      weight: 30
+    - identifier: search
+      name: 搜索
+      url: /search/
+      weight: 40
+    - identifier: about
+      name: 关于
+      url: /about/
+      weight: 50
+
+# 搜索页需要 JSON 输出
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+# ----------------------------------------------------------------------------
+# Markdown / 数学公式 / 代码高亮
+# ----------------------------------------------------------------------------
+markup:
+  goldmark:
+    renderer:
+      unsafe: true            # 允许在 Markdown 里写原始 HTML
+    extensions:
+      passthrough:            # 让 $...$ / $$...$$ 原样透传给 KaTeX
+        enable: true
+        delimiters:
+          block:
+            - ["\\[", "\\]"]
+            - ["$$", "$$"]
+          inline:
+            - ["\\(", "\\)"]
+            - ["$", "$"]
+  highlight:
+    noClasses: false          # 用 CSS class 高亮，可随深浅色主题切换
+    codeFences: true
+    guessSyntax: true
+    lineNos: false
+    tabWidth: 4
+  tableOfContents:
+    startLevel: 2
+    endLevel: 4

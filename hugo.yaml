@@ -2,7 +2,7 @@
 # Hugo config — PaperMod theme
 # 改这里：把 baseURL 换成你的 GitHub Pages 地址（见文件底部说明）
 # ============================================================================
-baseURL: "https://USERNAME.github.io/"
+baseURL: "https://jianxyou.github.io/blogs/"   # 独立仓库 blogs，挂在子路径
 locale: "zh-cn"                # 主语言；写英文文章也完全没问题
 title: "Jianxin's Blog"
 theme: PaperMod
@@ -49,7 +49,7 @@ params:
 
   socialIcons:
     - name: github
-      url: "https://github.com/USERNAME"
+      url: "https://github.com/jianxyou"
     - name: email
       url: "mailto:q3556168405@gmail.com"
     - name: rss

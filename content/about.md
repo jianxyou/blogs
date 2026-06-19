@@ -15,4 +15,4 @@ ShowWordCount: false
 - 研究中踩过的坑和解决方案
 - 一些工具、工程实践与随笔
 
-欢迎通过 [邮件](mailto:q3556168405@gmail.com) 或 [GitHub](https://github.com/USERNAME) 找我。
+欢迎通过 [邮件](mailto:q3556168405@gmail.com) 或 [GitHub](https://github.com/jianxyou) 找我。

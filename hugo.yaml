@@ -41,19 +41,18 @@ params:
   disableScrollToTop: false
   comments: false
 
-  # 首页顶部的自我介绍（PaperMod home-info 模式）
-  homeInfoParams:
-    Title: "Hi 👋"
-    Content: >
-      读研期间的研究笔记、论文阅读与随笔。主要关注机器学习 / 计算机视觉方向。
-
-  socialIcons:
-    - name: github
-      url: "https://github.com/jianxyou"
-    - name: email
-      url: "mailto:q3556168405@gmail.com"
-    - name: rss
-      url: "index.xml"
+  # 首页顶部的自我介绍 + 社交图标已移除，首页只显示文章列表。
+  # 想恢复就取消下面的注释（PaperMod home-info 模式）：
+  # homeInfoParams:
+  #   Title: "Hi 👋"
+  #   Content: "一句话简介"
+  # socialIcons:
+  #   - name: github
+  #     url: "https://github.com/jianxyou"
+  #   - name: email
+  #     url: "mailto:q3556168405@gmail.com"
+  #   - name: rss
+  #     url: "index.xml"
 
   # 站内搜索（配合下面的 outputs.home: JSON）
   fuseOpts:

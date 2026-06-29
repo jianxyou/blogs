@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(hugo new *)",
-      "Bash(hugo server *)"
+      "Bash(hugo server *)",
+      "Bash(curl -s -L \"https://jianxyou.github.io/blogs/posts/\")"
     ]
   }
 }

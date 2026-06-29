@@ -3,7 +3,9 @@
     "allow": [
       "Bash(hugo new *)",
       "Bash(hugo server *)",
-      "Bash(curl -s -L \"https://jianxyou.github.io/blogs/posts/\")"
+      "Bash(curl -s -L \"https://jianxyou.github.io/blogs/posts/\")",
+      "Bash(curl -s -L -H \"Cache-Control: no-cache\" -H \"Pragma: no-cache\" \"https://jianxyou.github.io/blogs/posts/?t=$\\(date +%s\\)\")",
+      "Bash(curl -s -L \"https://jianxyou.github.io/blogs/posts/?nocache=$\\(date +%s\\)\")"
     ]
   }
 }

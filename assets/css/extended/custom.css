@@ -1,0 +1,65 @@
+/* ============================================================
+   首页文章列表 —— 极简列表式
+   去掉卡片框，所有文章统一为「标题 / 摘要 / 日期」+ 细分割线
+   ============================================================ */
+
+/* 统一去掉卡片的背景、边框、圆角、阴影、内边距 */
+.post-entry,
+.first-entry {
+    position: relative;
+    background: none;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    min-height: auto;
+    margin: 0;
+    padding: 1.6rem 0;
+    border-bottom: 1px solid var(--border);
+    transition: none;
+}
+
+/* 第一篇不再特殊放大、不再垂直居中撑高 */
+.first-entry {
+    display: block;
+}
+.first-entry .entry-header h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.4rem;
+}
+
+/* 后续文章标题与第一篇统一字号 */
+.post-entry .entry-header h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.4rem;
+}
+
+/* 摘要：柔和的次要色，留点行距 */
+.post-entry .entry-content,
+.first-entry .entry-content {
+    margin: 0.3rem 0 0.6rem 0;
+    line-height: 1.6;
+    opacity: 0.85;
+}
+
+/* 元信息（日期·阅读时间）小而淡 */
+.post-entry .entry-footer,
+.first-entry .entry-footer {
+    font-size: 0.85rem;
+    opacity: 0.65;
+}
+
+/* 悬停：不再有卡片上浮，只让标题变成主题色 */
+.post-entry:hover,
+.first-entry:hover {
+    transform: none;
+}
+.post-entry:hover .entry-header h2,
+.first-entry:hover .entry-header h1 {
+    color: var(--primary);
+}
+
+/* 最后一篇不要拖一条多余的分割线 */
+.main > .post-entry:last-of-type,
+.main > .first-entry:last-of-type {
+    border-bottom: none;
+}
